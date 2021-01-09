@@ -152,10 +152,6 @@ endif(roscpp_FOUND)
 #Ros2#
 if(rclcpp_FOUND AND ${COMPILE_METHOD} STREQUAL "COLCON")
   ament_target_dependencies(rslidar_sdk_node rclcpp sensor_msgs std_msgs rslidar_msg)
-  install(TARGETS
-    rslidar_sdk_node
-    DESTINATION lib/${PROJECT_NAME}
-  )
   install(DIRECTORY
     launch
     rviz
@@ -163,3 +159,12 @@ if(rclcpp_FOUND AND ${COMPILE_METHOD} STREQUAL "COLCON")
   )
   ament_package()
 endif(rclcpp_FOUND AND ${COMPILE_METHOD} STREQUAL "COLCON")
+
+install(TARGETS
+  rslidar_sdk_node
+  DESTINATION lib/${PROJECT_NAME}
+)
+install(DIRECTORY
+  config
+  DESTINATION share/${PROJECT_NAME}
+)

@@ -1,16 +1,21 @@
 # Changelog
 
-## v1.3.1 - 2021-01-08
+## v1.3.1 - 2021-01-14
 
 ### Changed
 - Set CMake COMPILE_METHOD variable to CATKIN (since we still use catkin)
 - Changed definition of PROJECT_PATH in CMake (so we find the config file in the right place)
 - Copied package_ros1.xml as package.xml (see README.md, doubt we'll ever move to ROS2)
 - Changed config lidar_type to RSBP
+- Always install rslidar_sdk_node binary (rather than just for COLCON compile option)
+- Changed config path in node/rslidar_sdk_node to hard-coded "/opt/catkin/share/rslidar_sdk/config/config.yaml"
 
 ### Removed
 - Commented out building with protobuf in CMake (for now, due to mismatched libprotobuf .so in build container and sandbox)
 - Removed package_ros[1|2].xml
+
+## Added
+- Install the config directory to share/rslidar_sdk/
 
 ## v1.3.0 - 2020-11-10
 

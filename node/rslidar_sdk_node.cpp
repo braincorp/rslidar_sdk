@@ -58,7 +58,8 @@ int main(int argc, char** argv)
   YAML::Node config;
   try
   {
-    config = YAML::LoadFile((std::string)PROJECT_PATH + "/config/config.yaml");
+    // config = YAML::LoadFile((std::string)PROJECT_PATH + "/config/config.yaml");
+    config = YAML::LoadFile("/opt/catkin/share/rslidar_sdk/config/config.yaml");
   }
   catch (...)
   {
