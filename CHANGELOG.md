@@ -9,6 +9,7 @@
 - Changed config lidar_type to RSBP
 - Always install rslidar_sdk_node binary (rather than just for COLCON compile option)
 - Changed config path in node/rslidar_sdk_node to hard-coded "/opt/catkin/share/rslidar_sdk/config/config.yaml"
+- Send packets instead of point cloud through ROS
 
 ### Removed
 - Commented out building with protobuf in CMake (for now, due to mismatched libprotobuf .so in build container and sandbox)

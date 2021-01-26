@@ -17,7 +17,7 @@ set(POINT_TYPE XYZI)
 #========================
 set(PROJECT_NAME rslidar_sdk)
 # add_definitions(-DPROJECT_PATH="${PROJECT_SOURCE_DIR}")
-add_definitions(-DPROJECT_PATH="/opt/shining_software/catkin_ws/src/rslidar_sdk")
+add_definitions(-DPROJECT_PATH="/opt/catkin/share/rslidar_sdk")
 set(CMAKE_BUILD_TYPE RELEASE)
 add_definitions(-O3)
 add_definitions(-std=c++14)
